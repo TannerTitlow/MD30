@@ -7,6 +7,7 @@ import {
   SidebarMenu,
   SidebarLink,
   SidebarRoute,
+  SidebarExtLink,
   SideBtnWrap,
 } from "./SidebarElements";
 
@@ -97,7 +98,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/rsvp">RSVP</SidebarRoute>
+          <SidebarExtLink href="https://posh.vip/e/mdx30" target="_blank">RSVP</SidebarExtLink>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

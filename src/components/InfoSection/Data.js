@@ -133,7 +133,7 @@ export const closingSection = {
   topLine: "LFG",
   headline: "Can't wait to see you there!",
   description: "Prepare for an extraordinary 30th birthday bash, filled with laughter, adventure, and unforgettable memories. Tulum awaits, and together, we'll create a celebration that will be sure to go down as one of the best chapters in the Tell All. Let's make this milestone one for the books!",
-  link: "/rsvp",
+  link: "https://posh.vip/e/mdx30",
   buttonLabel: "RSVP",
   imgStart: true,
   img: require("../../images/logo-round.png"),

@@ -92,3 +92,24 @@ export const SidebarRoute = styled(LinkR)`
     color: #010606;
   }
 `;
+
+export const SidebarExtLink = styled.a`
+  border-radius: 50px;
+  background: #ffffff;
+  white-space: nowrap;
+  padding: 16px 64px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  margin-top: 20px;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+`;

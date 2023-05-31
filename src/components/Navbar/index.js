@@ -14,6 +14,7 @@ import {
   NavMenu,
   NavBtn,
   NavBtnLink,
+  NavBtnExtLink
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
@@ -133,7 +134,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/rsvp">RSVP</NavBtnLink>
+              <NavBtnExtLink href="https://posh.vip/e/mdx30" target="_blank">RSVP</NavBtnExtLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

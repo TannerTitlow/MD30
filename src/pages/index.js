@@ -50,7 +50,7 @@ function Home() {
       <Links {...barsLinks} />
       <InfoSection {...nightClubsSection} />
       <Links {...nightClubLinks} />
-      <RouteLinkSection {...closingSection} />
+      <ExtLinkSection {...closingSection} />
       <Footer />
     </>
   );
