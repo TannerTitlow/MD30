@@ -4,7 +4,7 @@ export const aboutSection = {
   lightText: false,
   lightTextDesc: false,
   topLine: "About",
-  headline: "Time to get it poppin'",
+  headline: "All roads lead to Tulum in March 2024",
   description:
     "Get ready to mark your calendars and pack your party shoes because a spectacular celebration awaits you! Join me in embracing the sun-kissed beaches and vibrant vibes of Tulum, Mexico as we celebrate my 30th birthday in style.",
   toSection: "hotel",
