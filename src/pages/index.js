@@ -5,7 +5,8 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import {
   InfoSection,
-  ExtLinkSection
+  ExtLinkSection,
+  RouteLinkSection
 } from '../components/InfoSection';
 import {
   aboutSection,
@@ -49,7 +50,7 @@ function Home() {
       <Links {...barsLinks} />
       <InfoSection {...nightClubsSection} />
       <Links {...nightClubLinks} />
-      <ExtLinkSection {...closingSection} />
+      <RouteLinkSection {...closingSection} />
       <Footer />
     </>
   );
