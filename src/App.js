@@ -9,8 +9,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} exact />
-        <Route path="/rsvp" element={<RsvpPage />} exact />
+        <Route path="/" element={<Home />} />
+        <Route exact path="/rsvp" element={<RsvpPage />} />
       </Routes>
     </Router>
   );
