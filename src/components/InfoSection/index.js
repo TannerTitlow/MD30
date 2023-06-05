@@ -116,7 +116,7 @@ export const ExtLinkSection = ({
                     <>
                       <LinkButton
                         onClick={() => {
-                          window.location.href = "/rsvp";
+                          window.location.href = "/logistics";
                         }}
                         smooth={true}
                         duration={500}
@@ -131,7 +131,7 @@ export const ExtLinkSection = ({
                       </LinkButton>
                       <LinkButton
                         onClick={() => {
-                          window.location.href = "/rsvp";
+                          window.location.href = "/faq";
                         }}
                         smooth={true}
                         duration={500}

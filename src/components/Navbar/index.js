@@ -18,7 +18,7 @@ import {
 } from "./NavbarElements";
 import data from "./data.json";
 
-const Navbar = ({ toggle, light }) => {
+const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
@@ -41,16 +41,14 @@ const Navbar = ({ toggle, light }) => {
   for (let i = 0; i < data.length; i++) {
     if (window.location.pathname === "/") {
       navItems.push(
-        <NavItem>
+        <NavItem key={i}>
           <NavLinks
-            key={i}
             to={data[i].id}
             smooth={true}
             duration={500}
             spy={true}
             exact="true"
             offset={-80}
-            light={light}
           >
             {data[i].name}
           </NavLinks>
@@ -59,16 +57,14 @@ const Navbar = ({ toggle, light }) => {
     }
     else {
       navItems.push(
-        <NavItem>
+        <NavItem key={i}>
           <NavPagesLinks
-            key={i}
             href={"/#" + data[i].id}
             smooth={true}
             duration={500}
             spy={true}
             exact="true"
             offset={-80}
-            light={light}
           >
             {data[i].name}
           </NavPagesLinks>
