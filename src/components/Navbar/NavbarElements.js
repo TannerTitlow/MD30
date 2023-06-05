@@ -26,7 +26,7 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 24px;
-  max-width: 1100px;
+  max-width: 1200px;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -86,7 +86,21 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #f19350;
+  color: ${({ light }) => (light ? "#fff" : "#f19350")};
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &.active {
+    border-bottom: 3px solid #ffffff;
+  }
+`;
+
+export const NavPagesLinks = styled.a`
+  color: ${({ light }) => (light ? "#fff" : "#f19350")};
   display: flex;
   align-items: center;
   text-decoration: none;

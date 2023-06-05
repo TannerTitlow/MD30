@@ -112,6 +112,42 @@ export const ExtLinkSection = ({
                   >
                     {buttonLabel}
                   </LinkButton>
+                  {id === "closing" ? (
+                    <>
+                      <LinkButton
+                        onClick={() => {
+                          window.location.href = "/rsvp";
+                        }}
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact="true"
+                        offset={-80}
+                        primary={primary ? 1 : 0}
+                        dark={dark ? 1 : 0}
+                        dark2={dark2 ? 1 : 0}
+                      >
+                        Logistics
+                      </LinkButton>
+                      <LinkButton
+                        onClick={() => {
+                          window.location.href = "/rsvp";
+                        }}
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact="true"
+                        offset={-80}
+                        primary={primary ? 1 : 0}
+                        dark={dark ? 1 : 0}
+                        dark2={dark2 ? 1 : 0}
+                      >
+                        FAQ
+                      </LinkButton>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                 </BtnWrap>
               </TextWrapper>
             </Column1>

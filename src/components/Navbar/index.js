@@ -9,15 +9,16 @@ import {
   NavbarContainer,
   NavItem,
   NavLinks,
+  NavPagesLinks,
   NavLogo,
   LogoImg,
   NavMenu,
   NavBtn,
-  NavBtnLink,
   NavBtnExtLink
 } from "./NavbarElements";
+import data from "./data.json";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, light }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
@@ -36,6 +37,45 @@ const Navbar = ({ toggle }) => {
     scroll.scrollToTop();
   };
 
+  const navItems = [];
+  for (let i = 0; i < data.length; i++) {
+    if (window.location.pathname === "/") {
+      navItems.push(
+        <NavItem>
+          <NavLinks
+            key={i}
+            to={data[i].id}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            light={light}
+          >
+            {data[i].name}
+          </NavLinks>
+        </NavItem>
+      );
+    }
+    else {
+      navItems.push(
+        <NavItem>
+          <NavPagesLinks
+            key={i}
+            href={"/#" + data[i].id}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            light={light}
+          >
+            {data[i].name}
+          </NavPagesLinks>
+        </NavItem>
+      );
+    }
+  }
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
@@ -48,93 +88,16 @@ const Navbar = ({ toggle }) => {
               <FaBars color="orange" />
             </MobileIcon>
             <NavMenu>
-              <NavItem>
-                <NavLinks
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  About
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="hotel"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Hotel
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="excursions"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Excursions
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="beach-clubs"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Beach Clubs
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="food"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Food
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="bars"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Bars
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="night-clubs"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Night Clubs
-                </NavLinks>
-              </NavItem>
+              {navItems}
             </NavMenu>
             <NavBtn>
               <NavBtnExtLink href="https://posh.vip/e/mdx30" target="_blank">RSVP</NavBtnExtLink>
+            </NavBtn>
+            <NavBtn>
+              <NavBtnExtLink href="/logistics">Logistics</NavBtnExtLink>
+            </NavBtn>
+            <NavBtn>
+              <NavBtnExtLink href="/faq">FAQ</NavBtnExtLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

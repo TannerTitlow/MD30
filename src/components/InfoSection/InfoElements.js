@@ -89,7 +89,7 @@ export const BtnWrap = styled.div`
   justify-content: flex-start;
   
   @media screen and (max-width: 768px) {
-    justify-content: center;
+    justify-content: space-around;
   }
 `;
 

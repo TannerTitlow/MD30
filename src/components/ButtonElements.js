@@ -63,4 +63,8 @@ export const LinkButton = styled.a`
     transition: all 0.2s ease-in-out;
     background: ${({ primary }) => (primary ? "#ffffff" : "#3c3c3c")};
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 12px 24px;
+  }
 `;

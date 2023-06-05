@@ -6,12 +6,48 @@ import {
   SidebarWrapper,
   SidebarMenu,
   SidebarLink,
-  SidebarRoute,
+  SidebarPagesLink,
   SidebarExtLink,
   SideBtnWrap,
 } from "./SidebarElements";
+import data from "./data.json";
 
 const Sidebar = ({ isOpen, toggle }) => {
+  const sidebarItems = [];
+  for (let i = 0; i < data.length; i++) {
+    if (window.location.pathname === "/") {
+      sidebarItems.push(
+        <SidebarLink
+          key={i}
+          to={data[i].id}
+          onClick={toggle}
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-80}
+        >
+          {data[i].name}
+        </SidebarLink>
+      );
+    }
+    else {
+      sidebarItems.push(
+        <SidebarPagesLink
+          key={i}
+          href={"/#" + data[i].id}
+          onClick={toggle}
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-80}
+        >
+          {data[i].name}
+        </SidebarPagesLink>
+      );
+    }
+  }
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -19,86 +55,12 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink
-            to="about"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            About
-          </SidebarLink>
-          <SidebarLink
-            to="hotel"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Hotel
-          </SidebarLink>
-          <SidebarLink
-            to="excursions"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Excursions
-          </SidebarLink>
-          <SidebarLink
-            to="beach-clubs"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Beach Clubs
-          </SidebarLink>
-          <SidebarLink
-            to="food"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Food
-          </SidebarLink>
-          <SidebarLink
-            to="bars"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Bars
-          </SidebarLink>
-          <SidebarLink
-            to="night-clubs"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Night Clubs
-          </SidebarLink>
+          {sidebarItems}
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarExtLink href="https://posh.vip/e/mdx30" target="_blank">RSVP</SidebarExtLink>
+          <SidebarExtLink href="/logistics">Logistics</SidebarExtLink>
+          <SidebarExtLink href="/faq">FAQ</SidebarExtLink>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

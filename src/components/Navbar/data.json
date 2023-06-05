@@ -1,0 +1,30 @@
+[
+    {
+        "name": "About",
+        "id": "about"
+    },
+    {
+        "name": "Hotel",
+        "id": "hotel"
+    },
+    {
+        "name": "Excursions",
+        "id": "excursions"
+    },
+    {
+        "name": "Beach Clubs",
+        "id": "beach-clubs"
+    },
+    {
+        "name": "Food",
+        "id": "food"
+    },
+    {
+        "name": "Bars",
+        "id": "bars"
+    },
+    {
+        "name": "Night Clubs",
+        "id": "night-clubs"
+    }
+]
