@@ -100,7 +100,7 @@ export const FooterText = styled.p`
     padding: 0 12px;
 `;
 
-export const Footer = styled.div`
+export const LogisticsFooter = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;

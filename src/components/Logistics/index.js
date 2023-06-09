@@ -6,7 +6,7 @@ import {
   HeroText,
   HeroSubText,
   FooterText,
-  Footer
+  LogisticsFooter
 } from './LogisticsElements';
 import {
   ImageSection
@@ -16,6 +16,7 @@ import {
   slushFundSection,
   paymentPlanSection
 } from './Data';
+import Footer from '../Footer';
 
 const Logistics = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,11 +40,12 @@ const Logistics = () => {
       <ImageSection {...itinerarySection} />
       <ImageSection {...slushFundSection} />
       <ImageSection {...paymentPlanSection} />
-      <Footer>
+      <LogisticsFooter>
         <FooterText>
           By contributing to the slush fund, we'll gradually accumulate the necessary funds, making our Tulum trip worry-free and unforgettable for everyone. Let's come together, share the expenses, and create lifelong memories!
         </FooterText>
-      </Footer>
+      </LogisticsFooter>
+      <Footer />
     </>
   );
 };
