@@ -100,66 +100,68 @@ export const ExtLinkSection = ({
         <TopLine>{topLine}</TopLine>
         <Heading lightText={lightText}>{headline}</Heading>
         <Subtitle darkText={darkText}>{description}</Subtitle>
-        <BtnWrap>
-          <LinkButton
-            onClick={() => {
-              id === "about"
-                ? window.location.href = link
-                : window.open(
-                  link,
-                  "_blank"
-                );
-            }}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-            primary={primary ? 1 : 0}
-            dark={dark ? 1 : 0}
-            dark2={dark2 ? 1 : 0}
-          >
-            {buttonLabel}
-          </LinkButton>
-          {id === "closing" ? (
-            <>
-              <LinkButton
-                margin={true}
-                onClick={() => {
-                  window.location.href = "/logistics";
-                }}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                primary={primary ? 1 : 0}
-                dark={dark ? 1 : 0}
-                dark2={dark2 ? 1 : 0}
-              >
-                Logistics
-              </LinkButton>
-              <LinkButton
-                margin={true}
-                onClick={() => {
-                  window.location.href = "/faq";
-                }}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                primary={primary ? 1 : 0}
-                dark={dark ? 1 : 0}
-                dark2={dark2 ? 1 : 0}
-              >
-                FAQ
-              </LinkButton>
-            </>
-          ) : (
-            <></>
-          )}
-        </BtnWrap>
+        {id === "about" ? (<></>) : (
+          <BtnWrap>
+            <LinkButton
+              onClick={() => {
+                id === "about"
+                  ? window.location.href = link
+                  : window.open(
+                    link,
+                    "_blank"
+                  );
+              }}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              primary={primary ? 1 : 0}
+              dark={dark ? 1 : 0}
+              dark2={dark2 ? 1 : 0}
+            >
+              {buttonLabel}
+            </LinkButton>
+            {id === "closing" ? (
+              <>
+                <LinkButton
+                  margin={true}
+                  onClick={() => {
+                    window.location.href = "/logistics";
+                  }}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  primary={primary ? 1 : 0}
+                  dark={dark ? 1 : 0}
+                  dark2={dark2 ? 1 : 0}
+                >
+                  Logistics
+                </LinkButton>
+                <LinkButton
+                  margin={true}
+                  onClick={() => {
+                    window.location.href = "/faq";
+                  }}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  primary={primary ? 1 : 0}
+                  dark={dark ? 1 : 0}
+                  dark2={dark2 ? 1 : 0}
+                >
+                  FAQ
+                </LinkButton>
+              </>
+            ) : (
+              <></>
+            )}
+          </BtnWrap>
+        )}
       </TextWrapper>
     </Column1>
   );
