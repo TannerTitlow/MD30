@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import {
   InfoSection,
+  InfoSectionSteps,
   ExtLinkSection
 } from '../components/InfoSection';
 import {
@@ -38,6 +39,7 @@ function Home() {
       <Navbar toggle={toggle} />
       <HeroSection />
       <ExtLinkSection {...aboutSection} />
+      <InfoSectionSteps />
       <ExtLinkSection {...hotelSection} />
       <InfoSection {...excursionsSection} />
       <Links {...excursionsLinks} />

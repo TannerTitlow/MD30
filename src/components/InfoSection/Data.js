@@ -8,8 +8,8 @@ export const aboutSection = {
   headline: "All roads lead to Tulum in March 2024",
   description:
     "Mark your calendars and pack your party shoes because a spectacular celebration awaits you! Join me in embracing the sun-kissed beaches and vibrant vibes of Tulum, Mexico as we celebrate my 30th birthday in style.",
-  link: "https://posh.vip/e/mdx30",
-  buttonLabel: "RSVP",
+  link: "/logistics",
+  buttonLabel: "What's the plan?",
   imgStart: true,
   alt: "Logo",
   dark: false,

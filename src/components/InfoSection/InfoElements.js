@@ -18,6 +18,15 @@ export const InfoContainerAbout = styled.div`
   }
 `;
 
+export const InfoContainerSteps = styled.div`
+  color: #fff;
+  background: url(${require("../../images/white-gradient.jpg")}) no-repeat center center;
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
+  }
+`;
+
 export const InfoContainerLogistics = styled.div`
   color: #fff;
   position: relative;
@@ -114,6 +123,16 @@ export const TextWrapper = styled.div`
   padding-bottom: 60px;
 `;
 
+export const TextWrapperSteps = styled.div`
+  max-width: 540px;
+  padding: 30px 60px;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 30px 20px;
+  }
+`;
+
 export const TextWrapperLogistics = styled.div`
   max-width: 45vw;
   padding-top: 0;
@@ -157,6 +176,11 @@ export const BtnWrap = styled.div`
   @media screen and (max-width: 768px) {
     justify-content: space-around;
   }
+`;
+
+export const BtnWrapCentered = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const ImgWrap = styled.div`

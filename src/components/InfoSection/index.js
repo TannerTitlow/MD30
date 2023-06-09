@@ -1,17 +1,21 @@
 import React from "react";
 import { Button, LinkButton } from "../ButtonElements";
+import StepsBg from "../../images/white-gradient.jpg";
 import {
   InfoContainer,
   InfoContainerAbout,
+  InfoContainerSteps,
   InfoWrapper,
   InfoRow,
   Column1,
   Column2,
   TextWrapper,
+  TextWrapperSteps,
   TopLine,
   Heading,
   Subtitle,
   BtnWrap,
+  BtnWrapCentered,
   ImgWrap,
   ImgWrapLogistics,
   Img,
@@ -99,10 +103,12 @@ export const ExtLinkSection = ({
         <BtnWrap>
           <LinkButton
             onClick={() => {
-              window.open(
-                link,
-                "_blank"
-              );
+              id === "about"
+                ? window.location.href = link
+                : window.open(
+                  link,
+                  "_blank"
+                );
             }}
             smooth={true}
             duration={500}
@@ -115,7 +121,7 @@ export const ExtLinkSection = ({
           >
             {buttonLabel}
           </LinkButton>
-          {id === "closing" || id === "about" ? (
+          {id === "closing" ? (
             <>
               <LinkButton
                 margin={true}
@@ -190,6 +196,86 @@ export const ExtLinkSection = ({
         </InfoWrapper>
       </InfoContainer>
     </>
+  );
+};
+
+export const InfoSectionSteps = () => {
+  return (
+    <InfoContainerSteps backgroundImage={StepsBg} id="steps">
+      <InfoWrapper>
+        <InfoRow>
+          <TextWrapperSteps>
+            <TopLine>Step 1</TopLine>
+            <Heading lightText={false}>Get the lowdown</Heading>
+            <Subtitle darkText={true}>Before making any moves, bookings, etc. look over the information in the Logistics page so you know what you're signing up for.</Subtitle>
+            <BtnWrapCentered>
+              <LinkButton
+                onClick={() => {
+                  window.location.href = "/logistics";
+                }}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                primary={0}
+                dark={0}
+                dark2={0}
+              >
+                Logistics
+              </LinkButton>
+            </BtnWrapCentered>
+          </TextWrapperSteps>
+          <TextWrapperSteps>
+            <TopLine>Step 2</TopLine>
+            <Heading lightText={false}>Get on the list</Heading>
+            <Subtitle darkText={true}>After looking over the logistics of the trip and browsing the amazing places and plans below, it's time to lock in your spot. Hit the link below and start the countdown.</Subtitle>
+            <BtnWrapCentered>
+              <LinkButton
+                onClick={() => {
+                  window.open(
+                    "https://posh.vip/e/mdx30",
+                    "_blank"
+                  );
+                }}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                primary={0}
+                dark={0}
+                dark2={0}
+              >
+                RSVP
+              </LinkButton>
+            </BtnWrapCentered>
+          </TextWrapperSteps>
+          <TextWrapperSteps>
+            <TopLine>Step 3</TopLine>
+            <Heading lightText={false}>Get in the know</Heading>
+            <Subtitle darkText={true}>Once you've RSVP'd, check out the FAQ page to find answers to some lingering questions you might have.</Subtitle>
+            <BtnWrapCentered>
+              <LinkButton
+                onClick={() => {
+                  window.location.href = "/faq";
+                }}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                primary={0}
+                dark={0}
+                dark2={0}
+              >
+                FAQ
+              </LinkButton>
+            </BtnWrapCentered>
+          </TextWrapperSteps>
+        </InfoRow>
+      </InfoWrapper>
+    </InfoContainerSteps>
   );
 };
 
