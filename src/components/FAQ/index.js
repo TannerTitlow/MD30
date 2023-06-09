@@ -12,6 +12,7 @@ import {
   FaqBody
 } from './FaqElements';
 import faqs from './faqs.json';
+import Footer from '../Footer';
 
 const Faq = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,6 +55,7 @@ const Faq = () => {
           ))}
         </FaqWrapper>
       </FaqContainer>
+      <Footer />
     </>
   );
 };
