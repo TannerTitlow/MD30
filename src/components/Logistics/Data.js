@@ -59,7 +59,7 @@ export const paymentPlanSection = {
         "$75 per month per girl"
     ],
     imgStart: false,
-    img: require('../../images/payment-plan.png'),
+    img: require('../../images/payment-plan-mobile.png'),
     alt: "Logo",
     dark: false,
     primary: false,
