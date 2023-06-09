@@ -9,6 +9,36 @@ export const InfoContainer = styled.div`
   }
 `;
 
+export const InfoContainerLogistics = styled.div`
+  color: #fff;
+  position: relative;
+  background: ${({ backgroundImage }) => `url(${backgroundImage})`} no-repeat center center;
+  background-size: cover;
+  z-index: -2;
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
+  }
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: ${({ lightBg }) => (
+    lightBg
+      ? `linear-gradient(
+      108deg,
+      rgba(198, 109, 60, 1) 0%,
+      rgba(255, 192, 94, 1) 100%
+    )`
+      : "rgba(0, 0, 0, .75)"
+  )};
+  z-index: -1;
+`;
+
 export const InfoWrapper = styled.div`
   min-height: 100vh;
   display: flex;
@@ -16,6 +46,19 @@ export const InfoWrapper = styled.div`
   z-index: 1;
   width: 100%;
   max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 24px;
+  justify-content: center;
+`;
+
+export const InfoWrapperLogistics = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 100%;
+  max-width: 95vw;
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
@@ -36,16 +79,31 @@ export const InfoRow = styled.div`
   }
 `;
 
+export const InfoRowLogistics = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -54,8 +112,14 @@ export const TextWrapper = styled.div`
   padding-bottom: 60px;
 `;
 
+export const TextWrapperLogistics = styled.div`
+  max-width: 45vw;
+  padding-top: 0;
+  padding-bottom: 60px;
+`;
+
 export const TopLine = styled.div`
-  color: #7c7c7c;
+  color: ${({ lightBg }) => (lightBg ? "#fff" : "#7c7c7c")};
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -96,6 +160,14 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
+`;
+
+export const ImgWrapLogistics = styled.div`
+  max-width: 50vw;
+
+  @media screen and (max-width: 768px) {
+    max-width: 95vw;
+  }
 `;
 
 export const Img = styled.img`

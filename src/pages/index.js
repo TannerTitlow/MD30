@@ -5,8 +5,7 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import {
   InfoSection,
-  ExtLinkSection,
-  RouteLinkSection
+  ExtLinkSection
 } from '../components/InfoSection';
 import {
   aboutSection,

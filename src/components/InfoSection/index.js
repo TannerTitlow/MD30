@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, LinkButton, RouteButton } from "../ButtonElements";
+import { Button, LinkButton } from "../ButtonElements";
 import {
   InfoContainer,
   InfoWrapper,
@@ -12,7 +12,12 @@ import {
   Subtitle,
   BtnWrap,
   ImgWrap,
+  ImgWrapLogistics,
   Img,
+  InfoContainerLogistics,
+  Overlay,
+  InfoWrapperLogistics,
+  InfoRowLogistics,
 } from "./InfoElements";
 
 export const InfoSection = ({
@@ -163,15 +168,15 @@ export const ExtLinkSection = ({
   );
 };
 
-export const RouteLinkSection = ({
+export const ImageSection = ({
   lightBg,
+  backgroundImage,
   imgStart,
   topLine,
   lightText,
   headline,
   description,
-  link,
-  buttonLabel,
+  descriptionBullets,
   img,
   alt,
   id,
@@ -180,41 +185,43 @@ export const RouteLinkSection = ({
   dark,
   dark2,
 }) => {
+
+  var bullets = descriptionBullets.map((item, i) => {
+    return <li key={i}>{item}</li>;
+  });
+
+  var text = (
+    <Column1>
+      <TextWrapper>
+        <TopLine lightBg={lightBg}>{topLine}</TopLine>
+        <Heading lightText={lightText}>{headline}</Heading>
+        <Subtitle darkText={darkText}>
+          {description}<br />
+          {bullets}
+        </Subtitle>
+      </TextWrapper>
+    </Column1>
+  );
+
+  var image = (
+    <Column2>
+      <ImgWrapLogistics>
+        <Img src={img} alt={alt} />
+      </ImgWrapLogistics>
+    </Column2>
+  );
+
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
-        <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
-            <Column1>
-              <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
-                <BtnWrap>
-                  <RouteButton
-                    to={link}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
-                  >
-                    {buttonLabel}
-                  </RouteButton>
-                </BtnWrap>
-              </TextWrapper>
-            </Column1>
-            <Column2>
-              <ImgWrap>
-                <Img src={img} alt={alt} />
-              </ImgWrap>
-            </Column2>
-          </InfoRow>
-        </InfoWrapper>
-      </InfoContainer>
+      <InfoContainerLogistics lightBg={lightBg} id={id} backgroundImage={backgroundImage}>
+        <Overlay lightBg={lightBg} />
+        <InfoWrapperLogistics>
+          <InfoRowLogistics>
+            {imgStart ? image : text}
+            {imgStart ? text : image}
+          </InfoRowLogistics>
+        </InfoWrapperLogistics>
+      </InfoContainerLogistics>
     </>
   );
 };
