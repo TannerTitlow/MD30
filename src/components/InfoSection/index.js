@@ -19,6 +19,7 @@ import {
   InfoWrapperLogistics,
   InfoRowLogistics,
 } from "./InfoElements";
+import PaymentPlanMobile from "../../images/payment-plan-mobile.png";
 
 export const InfoSection = ({
   lightBg,
@@ -203,13 +204,24 @@ export const ImageSection = ({
     </Column1>
   );
 
-  var image = (
-    <Column2>
-      <ImgWrapLogistics>
-        <Img src={img} alt={alt} />
-      </ImgWrapLogistics>
-    </Column2>
-  );
+  // get the screen width
+  var width = window.innerWidth;
+
+  var image = width <= 768 && id === "payment-plan"
+    ? (
+      <Column2>
+        <ImgWrapLogistics>
+          <Img src={PaymentPlanMobile} alt={alt} />
+        </ImgWrapLogistics>
+      </Column2>
+    )
+    : (
+      <Column2>
+        <ImgWrapLogistics>
+          <Img src={img} alt={alt} />
+        </ImgWrapLogistics>
+      </Column2>
+    );
 
   return (
     <>
