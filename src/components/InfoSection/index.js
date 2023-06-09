@@ -2,6 +2,7 @@ import React from "react";
 import { Button, LinkButton } from "../ButtonElements";
 import {
   InfoContainer,
+  InfoContainerAbout,
   InfoWrapper,
   InfoRow,
   Column1,
@@ -73,6 +74,7 @@ export const InfoSection = ({
 
 export const ExtLinkSection = ({
   lightBg,
+  backgroundImage,
   imgStart,
   topLine,
   lightText,
@@ -88,79 +90,102 @@ export const ExtLinkSection = ({
   dark,
   dark2,
 }) => {
-  return (
+  var text = (
+    <Column1>
+      <TextWrapper>
+        <TopLine>{topLine}</TopLine>
+        <Heading lightText={lightText}>{headline}</Heading>
+        <Subtitle darkText={darkText}>{description}</Subtitle>
+        <BtnWrap>
+          <LinkButton
+            onClick={() => {
+              window.open(
+                link,
+                "_blank"
+              );
+            }}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            primary={primary ? 1 : 0}
+            dark={dark ? 1 : 0}
+            dark2={dark2 ? 1 : 0}
+          >
+            {buttonLabel}
+          </LinkButton>
+          {id === "closing" || id === "about" ? (
+            <>
+              <LinkButton
+                margin={true}
+                onClick={() => {
+                  window.location.href = "/logistics";
+                }}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                primary={primary ? 1 : 0}
+                dark={dark ? 1 : 0}
+                dark2={dark2 ? 1 : 0}
+              >
+                Logistics
+              </LinkButton>
+              <LinkButton
+                margin={true}
+                onClick={() => {
+                  window.location.href = "/faq";
+                }}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                primary={primary ? 1 : 0}
+                dark={dark ? 1 : 0}
+                dark2={dark2 ? 1 : 0}
+              >
+                FAQ
+              </LinkButton>
+            </>
+          ) : (
+            <></>
+          )}
+        </BtnWrap>
+      </TextWrapper>
+    </Column1>
+  );
+
+  var image = img ? (
+    <Column2>
+      <ImgWrap>
+        <Img src={img} alt={alt} />
+      </ImgWrap>
+    </Column2>
+  ) : (
+    <></>
+  );
+
+  return id === "about" ? (
+    <>
+      <InfoContainerAbout lightBg={lightBg} id={id}>
+        <InfoWrapper>
+          <InfoRow imgStart={imgStart}>
+            {imgStart ? image : text}
+            {imgStart ? text : image}
+          </InfoRow>
+        </InfoWrapper>
+      </InfoContainerAbout>
+    </>
+  ) : (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
-            <Column1>
-              <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
-                <BtnWrap>
-                  <LinkButton
-                    onClick={() => {
-                      window.open(
-                        link,
-                        "_blank"
-                      );
-                    }}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
-                  >
-                    {buttonLabel}
-                  </LinkButton>
-                  {id === "closing" ? (
-                    <>
-                      <LinkButton
-                        onClick={() => {
-                          window.location.href = "/logistics";
-                        }}
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        exact="true"
-                        offset={-80}
-                        primary={primary ? 1 : 0}
-                        dark={dark ? 1 : 0}
-                        dark2={dark2 ? 1 : 0}
-                      >
-                        Logistics
-                      </LinkButton>
-                      <LinkButton
-                        onClick={() => {
-                          window.location.href = "/faq";
-                        }}
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        exact="true"
-                        offset={-80}
-                        primary={primary ? 1 : 0}
-                        dark={dark ? 1 : 0}
-                        dark2={dark2 ? 1 : 0}
-                      >
-                        FAQ
-                      </LinkButton>
-                    </>
-                  ) : (
-                    <></>
-                  )}
-                </BtnWrap>
-              </TextWrapper>
-            </Column1>
-            <Column2>
-              <ImgWrap>
-                <Img src={img} alt={alt} />
-              </ImgWrap>
-            </Column2>
+            {imgStart ? image : text}
+            {imgStart ? text : image}
           </InfoRow>
         </InfoWrapper>
       </InfoContainer>

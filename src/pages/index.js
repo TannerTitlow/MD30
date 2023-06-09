@@ -37,7 +37,7 @@ function Home() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <InfoSection {...aboutSection} />
+      <ExtLinkSection {...aboutSection} />
       <ExtLinkSection {...hotelSection} />
       <InfoSection {...excursionsSection} />
       <Links {...excursionsLinks} />
