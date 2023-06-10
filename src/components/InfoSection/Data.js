@@ -24,7 +24,7 @@ export const hotelSection = {
   lightTextDesc: true,
   topLine: "Hotel",
   headline: "Amansala",
-  description: "We've secured a slice of paradise at the fabulous Amansala Hotel, where luxury and relaxation go hand in hand. Be sure to check out the Logistics & FAQ pages and RSVP before booking your room!",
+  description: "We've secured a slice of paradise at the fabulous Amansala Hotel, where luxury and relaxation go hand in hand. Be sure to check out the Logistics & FAQ pages and RSVP before booking a room in our room block!",
   link: "https://sky-us1.clock-software.com/89319/12530/wbe/en/products?utf8=%E2%9C%93&_track_back=&wbe_session=54a2956c10f3ca22b6c980ae7221e3cd&product_search%5Bwbe_rate_ids%5D%5B%5D=489021&product_search%5Bwbe_rate_ids%5D%5B%5D=489020&product_search%5Bwbe_rate_ids%5D%5B%5D=489019&product_search%5Bwbe_rate_ids%5D%5B%5D=489018&product_search%5Bwbe_rate_ids%5D%5B%5D=489017&product_search%5Bwbe_rate_ids%5D%5B%5D=489016&product_search%5Bwbe_rate_ids%5D%5B%5D=489015&product_search%5Bwbe_rate_ids%5D%5B%5D=489014&product_search%5Barrival%5D=20+Mar+2024&product_search%5Bnights%5D=4&product_search%5Bdeparture%5D=24+Mar+2024&product_search%5Badult_count%5D=2&product_search%5Bchildren_count%5D=0&product_search%5Bbonus_code%5D=&product_search%5Bcompany_code%5D=&product_search%5Bblock_code%5D=&commit=Search+for+available+rooms",
   buttonLabel: "Book a Room",
   imgStart: false,
