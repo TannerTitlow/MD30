@@ -1,9 +1,9 @@
 export const aboutSection = {
   id: "about",
-  lightBg: true,
-  backgroundImage: require("../../images/white-sand.jpg"),
-  lightText: false,
-  lightTextDesc: false,
+  lightBg: false,
+  backgroundImage: require("../../images/jungle.jpeg"),
+  lightText: true,
+  lightTextDesc: true,
   topLine: "Get Ready",
   headline: "All roads lead to Tulum in March 2024",
   description:
@@ -12,9 +12,9 @@ export const aboutSection = {
   buttonLabel: "What's the plan?",
   imgStart: true,
   alt: "Logo",
-  dark: false,
-  primary: false,
-  darkText: true,
+  dark: true,
+  primary: true,
+  darkText: false,
 };
 
 export const hotelSection = {

@@ -11,7 +11,7 @@ export const InfoContainer = styled.div`
 
 export const InfoContainerAbout = styled.div`
   color: #fff;
-  background: url(${require("../../images/tulum.jpg")}) no-repeat center center;
+  background: url(${require("../../images/jungle.jpg")}) no-repeat center center;
 
   @media screen and (max-width: 768px) {
     padding: 50px 0;
