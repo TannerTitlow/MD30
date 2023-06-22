@@ -1,7 +1,7 @@
 export const aboutSection = {
   id: "about",
   lightBg: false,
-  backgroundImage: require("../../images/jungle.jpeg"),
+  backgroundImage: require("../../images/jungle.jpg"),
   lightText: true,
   lightTextDesc: true,
   topLine: "Get Ready",
